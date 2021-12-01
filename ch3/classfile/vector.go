@@ -18,17 +18,17 @@ func newVec(data []float64) Vector {
 }
 
 // Gop_Add: func (a vector) + (b vector) vector
-func (a Vector) Gop_Add(b Vector) *Vector {
+func (a Vector) Gop_Add(b Vector) Vector {
 	vec := mat.NewVecDense(a.Len(), nil)
 	vec.AddVec(a, b)
-	return &Vector{vec}
+	return Vector{vec}
 }
 
 // Gop_Sub: func (a vector) - (b vector) vector
-func (a Vector) Gop_Sub(b Vector) *Vector {
+func (a Vector) Gop_Sub(b Vector) Vector {
 	vec := mat.NewVecDense(a.Len(), nil)
 	vec.SubVec(a, b)
-	return &Vector{vec}
+	return Vector{vec}
 }
 
 // Gop_Mul: func (a vector) * (b vector) vector
